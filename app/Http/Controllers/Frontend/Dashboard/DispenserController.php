@@ -7,5 +7,13 @@ use Illuminate\Http\Request;
 
 class DispenserController extends Controller
 {
-    //
+    public function status()
+    {
+
+    }
+
+    public function control()
+    {
+
+    }
 }
