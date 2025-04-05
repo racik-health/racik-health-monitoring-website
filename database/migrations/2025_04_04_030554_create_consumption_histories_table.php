@@ -17,6 +17,7 @@ return new class extends Migration {
             $table->integer('quantity');
             $table->text('note')->nullable();
             $table->timestamp('consumed_at');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

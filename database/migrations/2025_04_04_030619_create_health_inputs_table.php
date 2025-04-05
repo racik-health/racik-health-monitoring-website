@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->string('symptoms');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

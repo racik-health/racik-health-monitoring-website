@@ -19,6 +19,7 @@ return new class extends Migration {
             $table->string('response');
             $table->string('ip_address');
             $table->timestamp('executed_at');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

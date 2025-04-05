@@ -17,6 +17,7 @@ return new class extends Migration {
             $table->foreignId('herbal_medicine_id')->constrained()->cascadeOnDelete();
             $table->text('reason');
             $table->decimal('confidence_score', 5, 2);
+            $table->softDeletes();
             $table->timestamps();
         });
     }
