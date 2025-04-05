@@ -29,9 +29,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/logout', 'logout')->middleware(['auth', 'role:admin'])->name('logout');
     });
 
-    Route::middleware(['auth', 'role:admin'])->group(function () {
+    Route::middleware('admin')->group(function () {
         // Dashboard
-        Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
+        Route::get('/', [AdminDashboardController::class, 'index'])->name('dashboard');
         // Patients Management
         Route::resource('patients', PatientController::class);
         // Herbal Medicines Management
@@ -65,9 +65,9 @@ Route::prefix('patient')->name('patient.')->group(function () {
         Route::post('/register', 'store')->name('store');
     });
 
-    Route::middleware(['auth', 'role:patient'])->group(function () {
+    Route::middleware('patient')->group(function () {
         // Dashboard
-        Route::get('/dashboard', [FrontendDashboardController::class, 'index'])->name('dashboard');
+        Route::get('/', [FrontendDashboardController::class, 'index'])->name('dashboard');
         // Health Input
         Route::get('/complaint', [SymptomController::class, 'index'])->name('complaints.index');
         Route::post('/complaint', [SymptomController::class, 'store'])->name('complaints.store');

@@ -49,11 +49,13 @@ class RolePermissionSeeder extends Seeder
             'view consumption history',
         ]);
 
-        // create super admin
-        User::create([
+        // create super admin and assign role
+        $admin = User::create([
             'name' => 'Super Admin',
             'email' => 'superadmin@racik.my.id',
             'password' => Hash::make(env('ADMIN_PASSWORD', 'password')),
         ]);
+
+        $admin->assignRole($adminRole);
     }
 }
