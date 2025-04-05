@@ -1,4 +1,3 @@
-<!-- Sidebar -->
 <aside id="hs-application-sidebar"
     class="hs-overlay  [--auto-close:lg]
 hs-overlay-open:translate-x-0
@@ -14,18 +13,27 @@ lg:block lg:translate-x-0 lg:end-auto lg:bottom-0
         <div class="px-6 pt-4 flex items-center">
             <a class="flex-none rounded-xl text-xl inline-block font-semibold focus:outline-hidden focus:opacity-80"
                 href="#" aria-label="Preline">
-                <h2 class="text-2xl font-bold">RACIK</h2>
+                <h2 class="text-3xl font-bold">RACIK</h2>
             </a>
         </div>
         <div
             class="h-full overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300">
             <nav class="hs-accordion-group p-3 w-full flex flex-col flex-wrap" data-hs-accordion-always-open>
                 <ul class="flex flex-col space-y-1">
-                    <x-dashboard-sidebar-item icon="bx bxs-dashboard" text="Dashboard" />
-                    <x-dashboard-sidebar-item icon="bx bx-plus-medical" text="Manajemen Pasien" />
-                    <x-dashboard-sidebar-item icon="bx bxs-capsule" text="Manajemen Jamu" />
-                    <x-dashboard-sidebar-item icon="bx bxs-wrench" text="Monitoring Dispenser" />
-                    <x-dashboard-sidebar-item icon="bx bx-notepad" text="Laporan Konsumsi" />
+                    @role('admin')
+                        <x-dashboard-sidebar-item icon="bx bxs-dashboard" active="{{ request()->is('admin', 'admin/') }}"
+                            text="Dashboard" href="{{ route('admin.dashboard') }}" />
+                        <x-dashboard-sidebar-item icon="bx bx-plus-medical" active="{{ request()->is('admin/patients/*') }}"
+                            text="Manajemen Pasien" href="{{ route('admin.patients.index') }}" />
+                        <x-dashboard-sidebar-item icon="bx bxs-capsule"
+                            active="{{ request()->is('admin/herbal-medicines/*') }}" text="Manajemen Jamu"
+                            href="{{ route('admin.herbal-medicines.index') }}" />
+                        <x-dashboard-sidebar-item icon="bx bxs-wrench" active="{{ request()->is('admin/dispensers/*') }}"
+                            text="Monitoring Dispenser" href="{{ route('admin.dispensers.monitor') }}" />
+                        <x-dashboard-sidebar-item icon="bx bx-notepad"
+                            active="{{ request()->is('admin/consumption-reports/*') }}" text="Laporan Konsumsi"
+                            href="{{ route('admin.consumption-reports.index') }}" />
+                    @endrole
                 </ul>
             </nav>
         </div>

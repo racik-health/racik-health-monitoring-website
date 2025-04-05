@@ -1,4 +1,3 @@
-<!-- ========== HEADER ========== -->
 <header
     class="sticky top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-48 w-full bg-white border-b border-gray-200 text-sm py-2.5 lg:ps-65">
     <nav class="px-4 sm:px-6 flex basis-full items-center w-full mx-auto">
@@ -34,11 +33,20 @@
                                 <i class='bx bx-user text-xl'></i>
                                 Akun
                             </a>
-                            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100"
-                                href="#">
-                                <i class='bx bx-log-out text-xl'></i>
-                                Logout
-                            </a>
+                            @role('admin')
+                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100"
+                                    href="{{ route('admin.logout') }}">
+                                    <i class='bx bx-log-out text-xl'></i>
+                                    Logout
+                                </a>
+                            @endrole
+                            @role('patient')
+                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100"
+                                    href="{{ route('patient.logout') }}">
+                                    <i class='bx bx-log-out text-xl'></i>
+                                    Logout
+                                </a>
+                            @endrole
                         </div>
                     </div>
                 </div>
