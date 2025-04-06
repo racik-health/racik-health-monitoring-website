@@ -33,7 +33,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         // Dashboard
         Route::get('/', [AdminDashboardController::class, 'index'])->name('dashboard');
         // Patients Management
-        Route::resource('patients', PatientController::class);
+        Route::resource('patients', PatientController::class)->except('show');
         // Herbal Medicines Management
         Route::resource('herbal-medicines', HerbalMedicineController::class);
         // Dispenser Monitoring
