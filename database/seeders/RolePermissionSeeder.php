@@ -54,6 +54,8 @@ class RolePermissionSeeder extends Seeder
             'name' => 'Super Admin',
             'email' => 'superadmin@racik.my.id',
             'password' => Hash::make(env('ADMIN_PASSWORD', 'password')),
+            'phone_number' => '+6281282159360',
+            'gender' => 'male',
         ]);
 
         $admin->assignRole($adminRole);
