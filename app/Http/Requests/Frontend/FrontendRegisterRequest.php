@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Frontend;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class FrontendLoginRequest extends FormRequest
+class FrontendRegisterRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,8 +22,12 @@ class FrontendLoginRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'name' => 'required|string|min:3|max:255',
             'email' => 'required|email:rfc,dns|max:255',
-            'password' => 'required|min:8|max:255',
+            'phone_number' => 'required|string|min:10|max:20',
+            'gender' => 'required|string|in:male,female',
+            'password' => 'required|min:8|max:255|confirmed',
+            'password_confirmation' => 'required|min:8|max:255',
         ];
     }
 }

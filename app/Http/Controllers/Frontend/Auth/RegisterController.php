@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Frontend\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\FrontendRegisterRequest;
+use App\Http\Requests\Frontend\FrontendRegisterRequest;
 use App\Mail\RegistrationSuccessfulMail;
 use App\Repositories\Contracts\Frontend\FrontendRegisterRepositoryInterface;
 use Illuminate\Http\RedirectResponse;
