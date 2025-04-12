@@ -12,8 +12,9 @@ lg:block lg:translate-x-0 lg:end-auto lg:bottom-0
     <div class="relative flex flex-col h-full max-h-full">
         <div class="px-6 pt-4 flex items-center">
             <a class="flex-none rounded-xl text-xl inline-block font-semibold focus:outline-hidden focus:opacity-80"
-                href="#" aria-label="Preline">
-                <h2 class="text-3xl font-bold">RACIK</h2>
+                href="{{ route('home') }}" aria-label="Preline">
+                <img src="{{ asset('assets/icons/frontend/home/logo-racik.png') }}" width="120" height="30"
+                    alt="Racik" class="h-9" loading="lazy">
             </a>
         </div>
         <div
@@ -36,6 +37,23 @@ lg:block lg:translate-x-0 lg:end-auto lg:bottom-0
                         <x-dashboard.dashboard-sidebar-item icon="bx bx-notepad"
                             active="{{ request()->is('admin/consumption-reports*') }}" text="Laporan Konsumsi"
                             href="{{ route('admin.consumption-reports.index') }}" />
+                    @endrole
+                    @role('patient')
+                        <x-dashboard.dashboard-sidebar-item icon="bx bxs-dashboard"
+                            active="{{ request()->is('patient', 'patient/') }}" text="Dashboard"
+                            href="{{ route('patient.dashboard') }}" />
+                        <x-dashboard.dashboard-sidebar-item icon="bx bx-plus-medical"
+                            active="{{ request()->is('patient/complaint*') }}" text="Input Keluhan"
+                            href="{{ route('patient.complaints.index') }}" />
+                        <x-dashboard.dashboard-sidebar-item icon="bx bxs-wrench"
+                            active="{{ request()->is('patient/dispenser*') }}" text="Kontrol Dispenser"
+                            href="{{ route('patient.dispensers.controls') }}" />
+                        <x-dashboard.dashboard-sidebar-item icon="bx bx-notepad"
+                            active="{{ request()->is('patient/recommendation*') }}" text="Hasil Rekomendasi"
+                            href="{{ route('patient.recommendations.index') }}" />
+                        <x-dashboard.dashboard-sidebar-item icon="bx bxs-capsule"
+                            active="{{ request()->is('patient/consumption-history*') }}" text="Riwayat Konsumsi"
+                            href="{{ route('patient.consumption-history.index') }}" />
                     @endrole
                 </ul>
             </nav>
