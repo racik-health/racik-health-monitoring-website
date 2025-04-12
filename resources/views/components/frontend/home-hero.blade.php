@@ -1,4 +1,4 @@
-<section class="container mx-auto px-4 pt-16 pb-16 md:py-24">
+<section class="container mx-auto px-4 pt-16 pb-16 md:py-24" id="beranda">
     <div class="flex flex-col md:flex-row items-center gap-12">
         <div class="md:w-1/2" data-aos="fade-right" data-aos-duration="1000">
             <span class="inline-block px-3 py-1 bg-brown-100 text-brown-600 rounded-md text-sm font-medium mb-4">Inovasi

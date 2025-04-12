@@ -12,8 +12,7 @@
         </button>
         {{-- Desktop navigation --}}
         <nav class="hidden md:flex items-center space-x-8">
-            <a href="{{ route('home') }}"
-                class="text-brown-700 hover:text-brown-500 transition-colors duration-300 font-medium">
+            <a href="#beranda" class="text-brown-700 hover:text-brown-500 transition-colors duration-300 font-medium">
                 Beranda
             </a>
             <a href="#fitur" class="text-brown-700 hover:text-brown-500 transition-colors duration-300 font-medium">

@@ -26,7 +26,7 @@
             <div>
                 <h3 class="text-lg font-bold mb-6 text-brown-800">Tautan Cepat</h3>
                 <ul class="space-y-4">
-                    <li><a href="#"
+                    <li><a href="#beranda"
                             class="text-brown-600 hover:text-brown-500 transition-colors duration-300">Beranda</a>
                     </li>
                     <li><a href="#fitur"
