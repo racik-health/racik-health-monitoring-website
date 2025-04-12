@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Frontend\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\FrontendRegisterRequest;
+use App\Mail\RegistrationSuccessfulMail;
 use App\Repositories\Contracts\Frontend\FrontendRegisterRepositoryInterface;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\View\View;
 
 class RegisterController extends Controller
@@ -27,6 +29,9 @@ class RegisterController extends Controller
 
         try {
             $patient = $this->frontendRegisterRepository->register($validated);
+
+            // Send email to the patient
+            Mail::to($patient->email)->queue(new RegistrationSuccessfulMail($patient));
 
             return redirect()->route('patient.login')->with('success', 'Anda berhasil mendaftar');
         } catch (\Exception $e) {
