@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\Repositories\Admin\ConsumtionReportRepository;
 use App\Repositories\Admin\HerbalMedicineRepository;
 use App\Repositories\Admin\PatientRepository;
+use App\Repositories\Contracts\Admin\ConsumtionReportRepositoryInterface;
 use App\Repositories\Contracts\Admin\HerbalMedicineRepositoryInterface;
 use App\Repositories\Contracts\Admin\PatientRepositoryInterface;
 use App\Repositories\Contracts\Frontend\FrontendRegisterRepositoryInterface;
@@ -36,6 +38,7 @@ class AppServiceProvider extends ServiceProvider
     public array $singletons = [
         PatientRepositoryInterface::class => PatientRepository::class,
         HerbalMedicineRepositoryInterface::class => HerbalMedicineRepository::class,
+        ConsumtionReportRepositoryInterface::class => ConsumtionReportRepository::class,
 
         FrontendRegisterRepositoryInterface::class => FrontendRegisterRepository::class
     ];

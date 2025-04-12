@@ -39,6 +39,6 @@ class ConsumptionHistory extends Model
      */
     public function herbalMedicine(): BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(HerbalMedicine::class);
     }
 }

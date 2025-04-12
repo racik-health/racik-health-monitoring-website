@@ -39,7 +39,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         // Dispenser Monitoring
         Route::get('/dispensers/monitor', [AdminDispenserController::class, 'index'])->name('dispensers.monitor');
         // Consumption Reports
-        Route::resource('consumption-reports', ConsumptionReportController::class);
+        Route::resource('consumption-reports', ConsumptionReportController::class)->except('show');
     });
 });
 
