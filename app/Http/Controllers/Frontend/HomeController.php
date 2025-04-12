@@ -10,6 +10,6 @@ class HomeController extends Controller
 {
     public function index(): View
     {
-        return view('app.frontend.pages.home.testing');
+        return view('app.frontend.pages.home.index');
     }
 }
