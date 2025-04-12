@@ -4,7 +4,7 @@ namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class AdminLoginRequest extends FormRequest
+class HerbalMedicineStoreRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,8 +22,10 @@ class AdminLoginRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'email' => 'required|email|max:255',
-            'password' => 'required|min:8|max:255',
+            'name' => 'required|string|min:3|max:255',
+            'description' => 'required|string|min:3|max:255',
+            'ingredients' => 'required|string|min:3|max:655',
+            'stock' => 'required|integer|min:1',
         ];
     }
 }

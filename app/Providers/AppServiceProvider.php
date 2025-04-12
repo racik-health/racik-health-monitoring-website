@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Repositories\Admin\HerbalMedicineRepository;
 use App\Repositories\Admin\PatientRepository;
+use App\Repositories\Contracts\Admin\HerbalMedicineRepositoryInterface;
 use App\Repositories\Contracts\Admin\PatientRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
 
@@ -30,6 +32,7 @@ class AppServiceProvider extends ServiceProvider
      * @var array
      */
     public array $singletons = [
-        PatientRepositoryInterface::class => PatientRepository::class
+        PatientRepositoryInterface::class => PatientRepository::class,
+        HerbalMedicineRepositoryInterface::class => HerbalMedicineRepository::class
     ];
 }

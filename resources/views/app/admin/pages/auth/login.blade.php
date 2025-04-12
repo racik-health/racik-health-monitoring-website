@@ -19,7 +19,7 @@
     <meta property="og:title" content="Admin Portal - Racik Health Monitoring System">
     <meta property="og:description"
         content="Portal otentikasi aman untuk administrator sistem. Kelola data pasien, resep herbal, dan pantau dispenser secara real-time melalui dashboard terintegrasi.">
-    <meta property="og:image" content="{{ asset('assets/images/og-image.jpg') }}">
+    <meta property="og:image" content="{{ asset('assets/icons/frontend/home/logo-racik.png') }}">
     <meta property="og:locale" content="id_ID">
 
     {{-- Structured Data --}}
@@ -35,7 +35,7 @@
                 "name": "Racik Health",
                 "logo": {
                     "@type": "ImageObject",
-                    "url": "{{ asset('assets/images/logo.png') }}"
+                    "url": "{{ asset('assets/icons/frontend/home/logo-racik.png') }}"
                 }
             }
         }
@@ -45,11 +45,10 @@
     <link rel="canonical" href="{{ URL::current() }}" />
 
     {{-- Favicon --}}
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/favicon/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/favicon/favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}">
-    <link rel="mask-icon" href="{{ asset('assets/favicon/safari-pinned-tab.svg') }}" color="#3a86ff">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="{{ asset('assets/icons/frontend/home/favicon 32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="{{ asset('assets/icons/frontend/home/favicon 16x16.png') }}">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 
@@ -59,7 +58,7 @@
     <meta name="security" content="SSL Encrypted">
 
     {{-- Robots --}}
-    <meta name="robots" content="@yield('robots', 'index, follow')">
+    <meta name="robots" content="index, follow">
 
     <title>Masuk - Racik</title>
 
@@ -85,7 +84,7 @@
         <div class="bg-white border border-gray-200 rounded-xl shadow-2xs max-w-md mx-auto w-full">
             <div class="p-4 sm:p-7">
                 <div class="text-center">
-                    <h1 class="block text-2xl font-bold text-gray-800 mb-4">Racik</h1>
+                    <a href="{{ route('home') }}" class="block text-2xl font-bold text-gray-800 mb-4">Racik</a>
                 </div>
 
                 <x-alert-message />
@@ -120,8 +119,8 @@
                                     class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                                     required aria-describedby="password-error">
                                 <div class="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
-                                    <svg class="size-5 text-red-500" width="16" height="16"
-                                        fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                                    <svg class="size-5 text-red-500" width="16" height="16" fill="currentColor"
+                                        viewBox="0 0 16 16" aria-hidden="true">
                                         <path
                                             d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
                                     </svg>
@@ -138,9 +137,6 @@
             </div>
         </div>
     </section>
-
-    {{-- Scripts --}}
-    @stack('scripts')
 </body>
 
 </html>

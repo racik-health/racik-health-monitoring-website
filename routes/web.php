@@ -35,7 +35,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         // Patients Management
         Route::resource('patients', PatientController::class)->except('show');
         // Herbal Medicines Management
-        Route::resource('herbal-medicines', HerbalMedicineController::class);
+        Route::resource('herbal-medicines', HerbalMedicineController::class)->except('show');
         // Dispenser Monitoring
         Route::get('/dispensers/monitor', [AdminDispenserController::class, 'index'])->name('dispensers.monitor');
         // Consumption Reports

@@ -32,7 +32,7 @@
                 "name": "Racik Health",
                 "logo": {
                     "@type": "ImageObject",
-                    "url": "{{ asset('assets/images/logo.png') }}"
+                    "url": "{{ asset('assets/icons/frontend/home/logo-racik.png') }}"
                 }
             }
         }
@@ -42,11 +42,10 @@
     <link rel="canonical" href="{{ URL::current() }}" />
 
     {{-- Favicon --}}
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/favicon/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/favicon/favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}">
-    <link rel="mask-icon" href="{{ asset('assets/favicon/safari-pinned-tab.svg') }}" color="#3a86ff">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="{{ asset('assets/icons/frontend/home/favicon 32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="{{ asset('assets/icons/frontend/home/favicon 16x16.png') }}">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 
@@ -78,13 +77,13 @@
 
 <body class="font-inter">
     {{-- Header --}}
-    <x-dashboard-header />
+    <x-dashboard.dashboard-header />
 
     {{-- Breadcrumb --}}
-    <x-dashboard-breadcrumb />
+    <x-dashboard.dashboard-breadcrumb />
 
     {{-- Sidebar --}}
-    <x-dashboard-sidebar />
+    <x-dashboard.dashboard-sidebar />
 
     {{-- Content --}}
     <div class="w-full lg:ps-64">
