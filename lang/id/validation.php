@@ -278,7 +278,8 @@ return [
         'winner' => 'winner',
         'work' => 'work',
         'year' => 'tahun',
-        'ingredients' => 'Bahan Baku',
-        'stock' => 'Stok',
+        'ingredients' => 'bahan baku',
+        'stock' => 'stok',
+        'phone_number' => 'nomor telepon',
     ],
 ];
