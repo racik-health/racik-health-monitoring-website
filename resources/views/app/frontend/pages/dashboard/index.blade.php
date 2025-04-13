@@ -160,141 +160,6 @@
                 </div>
             </div>
         </div>
-        <!-- Action Cards -->
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-            <!-- Input Keluhan Card -->
-            <a href="{{ route('patient.complaints.index') }}"
-                class="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl hover:shadow-md hover:border-gray-300 transition">
-                <div class="p-4 md:p-5 flex flex-col h-full">
-                    <div class="flex items-center gap-x-4 mb-3">
-                        <div
-                            class="flex-shrink-0 flex justify-center items-center size-12 rounded-md bg-red-50 text-red-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="size-6">
-                                <path d="M8 19h8a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2Z"></path>
-                                <path d="M8 19h8"></path>
-                                <path d="M8 5h8"></path>
-                                <path d="M12 12h.01"></path>
-                                <path d="M12 8h.01"></path>
-                                <path d="M12 16h.01"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-gray-800">Input Keluhan</h3>
-                        </div>
-                    </div>
-                    <p class="mt-1 text-gray-600 flex-grow">
-                        Masukkan gejala atau keluhan kesehatan yang Anda rasakan untuk mendapatkan rekomendasi jamu
-                    </p>
-                    <p class="mt-5 inline-flex items-center gap-x-1 text-sm font-semibold text-gray-800">
-                        Input Keluhan Baru
-                        <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m9 18 6-6-6-6"></path>
-                        </svg>
-                    </p>
-                </div>
-            </a>
-            <!-- Kontrol Dispenser Card -->
-            <a href="{{ route('patient.dispensers.controls') }}"
-                class="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl hover:shadow-md hover:border-gray-300 transition">
-                <div class="p-4 md:p-5 flex flex-col h-full">
-                    <div class="flex items-center gap-x-4 mb-3">
-                        <div
-                            class="flex-shrink-0 flex justify-center items-center size-12 rounded-md bg-purple-50 text-purple-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="size-6">
-                                <path
-                                    d="M19 5h-4V2a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1v3H1a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8h1a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1Z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-gray-800">Kontrol Dispenser</h3>
-                        </div>
-                    </div>
-                    <p class="mt-1 text-gray-600 flex-grow">
-                        Kontrol dispenser untuk membuat jamu berdasarkan rekomendasi yang telah Anda terima
-                    </p>
-                    <p class="mt-5 inline-flex items-center gap-x-1 text-sm font-semibold text-gray-800">
-                        Kelola Dispenser
-                        <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m9 18 6-6-6-6"></path>
-                        </svg>
-                    </p>
-                </div>
-            </a>
-            <!-- Lihat Rekomendasi Card -->
-            <a href="{{ route('patient.recommendations.index') }}"
-                class="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl hover:shadow-md hover:border-gray-300 transition">
-                <div class="p-4 md:p-5 flex flex-col h-full">
-                    <div class="flex items-center gap-x-4 mb-3">
-                        <div
-                            class="flex-shrink-0 flex justify-center items-center size-12 rounded-md bg-green-50 text-green-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="size-6">
-                                <path d="m9 18 6-6-6-6"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-gray-800">Hasil Rekomendasi</h3>
-                        </div>
-                    </div>
-                    <p class="mt-1 text-gray-600 flex-grow">
-                        Lihat rekomendasi jamu yang telah diberikan berdasarkan keluhan kesehatan Anda
-                    </p>
-                    <p class="mt-5 inline-flex items-center gap-x-1 text-sm font-semibold text-gray-800">
-                        Lihat Rekomendasi
-                        <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m9 18 6-6-6-6"></path>
-                        </svg>
-                    </p>
-                </div>
-            </a>
-            <!-- Riwayat Konsumsi Card -->
-            <a href="{{ route('patient.consumption-history.index') }}"
-                class="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl hover:shadow-md hover:border-gray-300 transition">
-                <div class="p-4 md:p-5 flex flex-col h-full">
-                    <div class="flex items-center gap-x-4 mb-3">
-                        <div
-                            class="flex-shrink-0 flex justify-center items-center size-12 rounded-md bg-amber-50 text-amber-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="size-6">
-                                <path
-                                    d="M8.8 20v-4.1l1.9.2a2.3 2.3 0 0 0 2.164-2.1V8.3A5.37 5.37 0 0 0 2 8.25c0 2.8.656 3.95 1 4.8a.2.2 0 0 1-.2.2 3.5 3.5 0 0 0-1.5 2.7">
-                                </path>
-                                <path d="M19.8 17.8a7.5 7.5 0 0 0-2.4-3.8"></path>
-                                <path d="M22 19a7.6 7.6 0 0 0-1.1-3.8"></path>
-                                <path d="M13 18.2c.2 0 .4.1.5.3a2 2 0 0 1-.5 2.2c-.9.6-1.9.7-3 .7a6.3 6.3 0 0 1-5-2"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-gray-800">Riwayat Konsumsi</h3>
-                        </div>
-                    </div>
-                    <p class="mt-1 text-gray-600 flex-grow">
-                        Lihat riwayat jamu yang telah Anda konsumsi dan pantau pola konsumsi Anda
-                    </p>
-                    <p class="mt-5 inline-flex items-center gap-x-1 text-sm font-semibold text-gray-800">
-                        Lihat Riwayat
-                        <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m9 18 6-6-6-6"></path>
-                        </svg>
-                    </p>
-                </div>
-            </a>
-        </div>
         <!-- Recent Activity Section -->
         <div class="grid lg:grid-cols-2 gap-6">
             <!-- Recent Recommendations -->
@@ -329,7 +194,7 @@
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <path
                                     d="m9 18 6  stroke-linecap="round" stroke-linejoin="round">
-                                                                                                                                                                                                        <path d="
+                                                                                                                                                                                                                                                                    <path d="
                                     m9 18 6-6-6-6">
                                 </path>
                             </svg>
@@ -357,7 +222,7 @@
                                     </div>
                                     <span
                                         class="inline-flex items-center gap-x-1.5 py-1 px-2 rounded-md text-xs font-medium bg-amber-100 text-amber-800">
-                                        {{ $consumption->quantity }} porsi
+                                        {{ $consumption->quantity }} gelas
                                     </span>
                                 </li>
                             @endforeach
@@ -370,7 +235,7 @@
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <path
                                     d="m9 18 6  stroke-linecap="round" stroke-linejoin="round">
-                                                                                                                                                                                                        <path d="
+                                                                                                                                                                                                                                                                    <path d="
                                     m9 18 6-6-6-6">
                                 </path>
                             </svg>
@@ -409,7 +274,7 @@
                                 <h4 class="text-base font-medium text-gray-800">
                                     {{ $mostConsumedMedicine->herbalMedicine->name }}</h4>
                                 <p class="mt-1 text-sm text-gray-600">Total dikonsumsi: <span
-                                        class="font-medium">{{ $mostConsumedMedicine->total_quantity }} porsi</span></p>
+                                        class="font-medium">{{ $mostConsumedMedicine->total_quantity }} gelas</span></p>
                             </div>
                         </div>
                     @else
