@@ -31,7 +31,7 @@ class RegisterController extends Controller
             $patient = $this->frontendRegisterRepository->register($validated);
 
             // Send email to the patient
-            Mail::to($patient->email)->queue(new RegistrationSuccessfulMail($patient));
+            Mail::to($patient->email)->send(new RegistrationSuccessfulMail($patient));
 
             return redirect()->route('patient.login')->with('success', 'Anda berhasil mendaftar');
         } catch (\Exception $e) {

@@ -28,11 +28,17 @@
         @unless (Auth::check())
             <a href="{{ route('patient.login') }}"
                 class="bg-brown-600 text-white px-6 py-2 rounded-lg hover:bg-brown-700 transition-colors duration-300 font-medium hidden md:flex items-center space-x-8">
-                Daftar
+                Masuk
             </a>
         @endunless
         @role('patient')
             <a href="{{ route('patient.dashboard') }}"
+                class="bg-brown-600 text-white px-6 py-2 rounded-lg hover:bg-brown-700 transition-colors duration-300 font-medium hidden md:flex items-center space-x-8">
+                Dashboard
+            </a>
+        @endrole
+        @role('admin')
+            <a href="{{ route('admin.dashboard') }}"
                 class="bg-brown-600 text-white px-6 py-2 rounded-lg hover:bg-brown-700 transition-colors duration-300 font-medium hidden md:flex items-center space-x-8">
                 Dashboard
             </a>
@@ -62,11 +68,17 @@
             @unless (Auth::check())
                 <a href="{{ route('patient.login') }}"
                     class="bg-brown-600 text-white px-6 py-2 rounded-lg hover:bg-brown-700 transition-colors duration-300 font-medium">
-                    Daftar
+                    Masuk
                 </a>
             @endunless
             @role('patient')
                 <a href="{{ route('patient.dashboard') }}"
+                    class="bg-brown-600 text-white px-6 py-2 rounded-lg hover:bg-brown-700 transition-colors duration-300 font-medium">
+                    Dashboard
+                </a>
+            @endrole
+            @role('admin')
+                <a href="{{ route('admin.dashboard') }}"
                     class="bg-brown-600 text-white px-6 py-2 rounded-lg hover:bg-brown-700 transition-colors duration-300 font-medium">
                     Dashboard
                 </a>
