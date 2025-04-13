@@ -2,15 +2,16 @@
 
 {{-- Meta --}}
 @section('meta-description',
-    'Kelola data pasien dengan mudah di Racik Health. Pantau riwayat kesehatan, resep, dan
-    perkembangan pasien secara terintegrasi.')
+    'Lihat dan pantau riwayat konsumsi jamu Anda dengan mudah. Dapatkan catatan lengkap
+    mengenai jenis jamu, waktu konsumsi, dan manfaatnya secara terorganisir.')
 @section('meta-keywords',
-    'manajemen pasien, data kesehatan pasien, rekam medis digital, sistem monitoring pasien,
-    dashboard tenaga medis')
+    'riwayat konsumsi jamu, dashboard pengguna, konsumsi herbal, pemantauan kesehatan, jamu
+    tradisional, Racik Health')
 @section('og-title', 'Laporan Konsumsi - Racik')
 @section('og-description',
-    'Sistem manajemen pasien terintegrasi untuk memudahkan tenaga kesehatan dalam memantau dan
-    mengelola data pasien secara efisien.')
+    'Dashboard pribadi Anda untuk memantau konsumsi jamu secara menyeluruh. Lihat riwayat, dosis,
+    dan manfaat dari jamu yang telah dikonsumsi untuk mendukung kesehatan Anda.')
+
 
     {{-- Title --}}
 @section('title', 'Laporan Konsumsi - Racik')

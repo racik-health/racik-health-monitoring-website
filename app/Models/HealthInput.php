@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class HealthInput extends Model
@@ -32,5 +33,13 @@ class HealthInput extends Model
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
+    }
+
+    /**
+     * Get the recommendation results for the health input.
+     */
+    public function recommendationResults(): HasMany
+    {
+        return $this->hasMany(RecommendationResult::class);
     }
 }
