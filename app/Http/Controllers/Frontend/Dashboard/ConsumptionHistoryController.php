@@ -3,16 +3,19 @@
 namespace App\Http\Controllers\Frontend\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\ConsumptionHistory;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class ConsumptionHistoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): View
     {
-        //
+        $data['consumption_reports'] = ConsumptionHistory::where('user_id', auth()->user()->id)->latest()->get();
+        return view('app.frontend.pages.dashboard.history.consumption.index', compact('data'));
     }
 
     /**
