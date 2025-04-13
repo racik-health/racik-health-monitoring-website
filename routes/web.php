@@ -49,7 +49,11 @@ Route::prefix('admin')->name('admin.')->group(function () {
  * ---------------------------------------------------------------------------------------
  */
 // Landing Page
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::controller(HomeController::class)->group(function () {
+    Route::get('/', 'index')->name('home');
+    Route::post('/send-message', 'submitMessage')->name('home.send-message');
+    Route::post('subscribe', 'subscribeEmail')->name('home.subscribe');
+});
 
 Route::prefix('patient')->name('patient.')->group(function () {
     // Auth

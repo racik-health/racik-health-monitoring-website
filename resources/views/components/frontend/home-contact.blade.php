@@ -61,7 +61,7 @@
             </div>
             <div class="lg:w-2/3">
                 <h3 class="text-2xl font-bold mb-6 text-brown-800">Kirim Pesan</h3>
-                <form action="" method="POST">
+                <form action="{{ route('home.send-message') }}" method="POST">
                     @csrf
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                         <div>
@@ -81,12 +81,14 @@
                     <div class="mb-6">
                         <label for="subject" class="block text-sm font-medium mb-2 text-brown-700">Subjek</label>
                         <input type="text" id="subject" name="subject" placeholder="Masukkan subjek pesan"
-                            class="w-full p-3 border border-brown-200 rounded-lg text-base focus:border-brown-600 focus:ring-1 focus:ring-brown-600 focus:outline-none placeholder:text-brew-brown/50" required>
+                            class="w-full p-3 border border-brown-200 rounded-lg text-base focus:border-brown-600 focus:ring-1 focus:ring-brown-600 focus:outline-none placeholder:text-brew-brown/50"
+                            required>
                     </div>
                     <div class="mb-6">
                         <label for="message" class="block text-sm font-medium mb-2 text-brown-700">Pesan</label>
                         <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda di sini"
-                            class="w-full p-3 border border-brown-200 rounded-lg text-base focus:border-brown-600 focus:ring-1 focus:ring-brown-600 focus:outline-none placeholder:text-brew-brown/50" required></textarea>
+                            class="w-full p-3 border border-brown-200 rounded-lg text-base focus:border-brown-600 focus:ring-1 focus:ring-brown-600 focus:outline-none placeholder:text-brew-brown/50"
+                            required></textarea>
                     </div>
                     <div class="flex justify-end">
                         <button type="submit"

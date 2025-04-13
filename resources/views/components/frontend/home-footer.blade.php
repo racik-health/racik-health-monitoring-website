@@ -63,10 +63,10 @@
             <div>
                 <h3 class="text-lg font-bold mb-6 text-brown-800">Berlangganan</h3>
                 <p class="text-brown-600 mb-4">Dapatkan berita dan pembaruan terbaru dari Racik.</p>
-                <form action="" method="POST" class="mb-4">
+                <form action="{{ route('home.subscribe') }}" method="POST" class="mb-4">
                     @csrf
                     <div class="flex">
-                        <input type="email" name="subscribe_email" placeholder="Email Anda"
+                        <input type="email" name="email" placeholder="Email Anda"
                             class="flex-1 p-3 border border-brown-200 rounded-l-lg text-base focus:border-brown-600 focus:ring-1 focus:ring-brown-600 focus:outline-none placeholder:text-brew-brown/50"
                             required>
                         <button type="submit"
