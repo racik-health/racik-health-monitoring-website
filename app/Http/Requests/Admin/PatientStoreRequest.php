@@ -23,7 +23,7 @@ class PatientStoreRequest extends FormRequest
     {
         return [
             'name' => 'required|string|min:3|max:255',
-            'email' => 'required|email:rfc,dns|unique:users,email|max:255',
+            'email' => 'required|email|unique:users,email|max:255',
             'phone_number' => 'required|string|min:10|max:255',
             'gender' => 'required|string|in:male,female',
             'password' => 'required|string|min:8|max:255',

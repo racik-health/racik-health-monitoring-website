@@ -23,7 +23,7 @@ class FrontendRegisterRequest extends FormRequest
     {
         return [
             'name' => 'required|string|min:3|max:255',
-            'email' => 'required|email:rfc,dns|max:255',
+            'email' => 'required|email|max:255|unique:users,email',
             'phone_number' => 'required|string|min:10|max:20',
             'gender' => 'required|string|in:male,female',
             'password' => 'required|min:8|max:255|confirmed',

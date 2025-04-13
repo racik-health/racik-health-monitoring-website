@@ -22,7 +22,7 @@ class HomeController extends Controller
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|email:rfc,dns|max:255',
+            'email' => 'required|email|max:255',
             'subject' => 'required|string|max:255',
             'message' => 'required|string|max:1000',
         ]);
@@ -47,7 +47,7 @@ class HomeController extends Controller
     public function subscribeEmail(Request $request): RedirectResponse
     {
         $validated = $request->validate([
-            'email' => 'required|email:rfc,dns|unique:subscribers,email|max:255',
+            'email' => 'required|email|unique:subscribers,email|max:255',
         ]);
 
         DB::beginTransaction();
