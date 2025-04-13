@@ -81,6 +81,6 @@ Route::prefix('patient')->name('patient.')->group(function () {
         // Recommendations
         Route::get('/recommendation', [RecommendationController::class, 'index'])->name('recommendations.index');
         // Consumption History
-        Route::resource('consumption-history', ConsumptionHistoryController::class);
+        Route::resource('consumption-history', ConsumptionHistoryController::class)->only('index');
     });
 });

@@ -120,7 +120,7 @@
                                         </td>
                                         <td class="size-px whitespace-nowrap">
                                             <div class="px-6 py-3">
-                                                <span class="text-sm">{{ $report->quantity }} dosis</span>
+                                                <span class="text-sm">{{ $report->quantity }} gelas</span>
                                             </div>
                                         </td>
                                         <td class="size-px whitespace-nowrap">
@@ -138,7 +138,7 @@
                                         <td class="size-px whitespace-nowrap">
                                             <div class="px-6 py-3">
                                                 <span class="text-sm text-gray-500">
-                                                    {{ \Carbon\Carbon::parse($report->created_at)->format('d F Y') }}
+                                                    {{ \Carbon\Carbon::parse($report->created_at)->format('d F Y H:i') }}
                                                 </span>
                                             </div>
                                         </td>
