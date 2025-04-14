@@ -10,6 +10,9 @@
     <meta name="keywords" content="@yield('meta-keywords', 'kesehatan, jamu, monitoring kesehatan, herbal, dispenser jamu')">
     <meta name="author" content="@yield('meta-author', 'Tim Pencari Tuhan')">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="google-signin-client_id" content="@yield('google-client-id')">
+
+    {{-- Twitter --}}
 
     {{-- Open Graph / Facebook --}}
     <meta property="og:type" content="@yield('og-type', 'website')">

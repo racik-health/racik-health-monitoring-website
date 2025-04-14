@@ -45,9 +45,6 @@ lg:block lg:translate-x-0 lg:end-auto lg:bottom-0
                         <x-dashboard.dashboard-sidebar-item icon="bx bx-plus-medical"
                             active="{{ request()->is('patient/complaint*') }}" text="Input Keluhan"
                             href="{{ route('patient.complaints.index') }}" />
-                        <x-dashboard.dashboard-sidebar-item icon="bx bxs-wrench"
-                            active="{{ request()->is('patient/dispenser*') }}" text="Kontrol Dispenser"
-                            href="{{ route('patient.dispensers.controls') }}" />
                         <x-dashboard.dashboard-sidebar-item icon="bx bx-notepad"
                             active="{{ request()->is('patient/recommendation*') }}" text="Hasil Rekomendasi"
                             href="{{ route('patient.recommendations.index') }}" />

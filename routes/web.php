@@ -91,6 +91,8 @@ Route::prefix('patient')->name('patient.')->group(function () {
         Route::get('/dispenser/status', [FrontendDispenserController::class, 'status'])->name('dispensers.status');
         // Recommendations
         Route::get('/recommendation', [RecommendationController::class, 'index'])->name('recommendations.index');
+        Route::get('/recommendation/{healthInputId}', [RecommendationController::class, 'show'])->name('recommendations.show');
+        Route::post('/recommendation/prepare', [RecommendationController::class, 'prepareInDispenser'])->name('recommendations.prepare');
         // Consumption History
         Route::resource('consumption-history', ConsumptionHistoryController::class)->only('index');
     });

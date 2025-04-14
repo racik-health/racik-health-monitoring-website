@@ -11,8 +11,9 @@
 @section('og-description',
     'Masukkan keluhan dan gejala kesehatan kamu melalui dashboard Racik. Data ini akan diproses
     untuk memberikan resep jamu yang sesuai secara otomatis.')
+@section('google-client-id', env('GOOGLE_CLIENT_ID'))
 
-    {{-- Title --}}
+{{-- Title --}}
 @section('title', 'Input Keluhan - Racik')
 
 {{-- Content --}}
@@ -169,3 +170,7 @@
         </div>
     </section>
 @endsection
+
+@push('scripts')
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+@endpush

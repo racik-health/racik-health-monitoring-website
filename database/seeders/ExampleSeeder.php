@@ -45,9 +45,18 @@ class ExampleSeeder extends Seeder
             'gender' => 'male',
         ]);
 
+        $user4 = User::create([
+            'name' => 'Salman Abdurrahman',
+            'email' => 'salmanabdurrahman12345@gmail.com',
+            'password' => bcrypt('12345678'),
+            'phone_number' => '081282159360',
+            'gender' => 'male',
+        ]);
+
         $user1->assignRole('patient');
         $user2->assignRole('patient');
         $user3->assignRole('patient');
+        $user4->assignRole('patient');
 
         // ==================
         // Data Dispensers (4 data dispenser)
@@ -80,30 +89,30 @@ class ExampleSeeder extends Seeder
         // Data Herbal Medicines (4 jenis obat herbal)
         // ==================
         $medicine1 = HerbalMedicine::create([
-            'name' => 'Jamu Kunyit Asam',
-            'description' => 'Minuman herbal tradisional untuk meningkatkan daya tahan tubuh',
-            'ingredients' => 'Kunyit, asam jawa, gula',
+            'name' => 'Kunyit Asam',
+            'description' => 'Minuman herbal tradisional yang bermanfaat untuk meredakan nyeri haid dan detoksifikasi tubuh.',
+            'ingredients' => 'Kunyit, asam jawa, gula merah',
             'stock' => 100,
         ]);
 
         $medicine2 = HerbalMedicine::create([
-            'name' => 'Jamu Beras Kencur',
-            'description' => 'Minuman herbal untuk menyegarkan tubuh',
-            'ingredients' => 'Beras, kencur, gula',
+            'name' => 'Beras Kencur',
+            'description' => 'Minuman herbal yang menyegarkan dan membantu mengatasi pegal linu.',
+            'ingredients' => 'Beras, kencur, jahe, gula',
             'stock' => 80,
         ]);
 
         $medicine3 = HerbalMedicine::create([
-            'name' => 'Jamu Temulawak',
-            'description' => 'Minuman herbal untuk menambah stamina',
-            'ingredients' => 'Temulawak, gula merah, jahe',
-            'stock' => 50,
+            'name' => 'Temulawak',
+            'description' => 'Minuman herbal untuk meningkatkan nafsu makan dan menjaga fungsi hati.',
+            'ingredients' => 'Temulawak, jahe, gula aren',
+            'stock' => 70,
         ]);
 
         $medicine4 = HerbalMedicine::create([
-            'name' => 'Jamu Jahe Merah',
-            'description' => 'Minuman herbal untuk menghangatkan badan',
-            'ingredients' => 'Jahe merah, madu, rempah-rempah',
+            'name' => 'Cabe Puyang',
+            'description' => 'Minuman herbal untuk mengatasi pegal-pegal dan kelelahan.',
+            'ingredients' => 'Cabe puyang, jahe, daun pandan, gula',
             'stock' => 60,
         ]);
 
