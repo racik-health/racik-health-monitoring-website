@@ -1,0 +1,43 @@
+# Aktifkan mod_rewrite
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Allow Let's Encrypt ACME challenge (biar SSL jalan)
+    RewriteCond %{REQUEST_URI} ^/\.well-known/acme-challenge/ [NC]
+    RewriteRule ^ - [L]
+
+    # Redirect ke HTTPS jika belum pakai HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Skip redirect kalau sudah di folder public/ atau .well-known
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteCond %{REQUEST_URI} !^/\.well-known/
+    RewriteRule ^(.*)$ /public/$1 [L,QSA]
+</IfModule>
+
+# Blok akses file sensitif
+<FilesMatch "\.(env|log|sql|sqlite|json|xml|md|ini|yml|config)$">
+    Require all denied
+</FilesMatch>
+
+<Files "sitemap.xml">
+    Require all granted
+</Files>
+
+# Blok akses ke folder internal Laravel
+<IfModule mod_rewrite.c>
+    RewriteRule ^(storage|bootstrap|config|database|resources|routes|tests)/ - [F,L]
+</IfModule>
+
+# Gzip compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css application/javascript
+</IfModule>
+
+# Caching statis
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/* "*
