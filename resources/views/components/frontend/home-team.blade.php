@@ -62,7 +62,7 @@
             <div class="bg-beige rounded-lg p-6 shadow-sm transition-all duration-300 hover:shadow-md"
                 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                 <div class="flex flex-col items-center">
-                    <img src="{{ asset('assets/images/frontend/home/salman.webp') }}"
+                    <img src="{{ asset('assets/images/frontend/home/alwy.webp') }}"
                         class="w-24 h-24 bg-brown-200 rounded-full mb-6 overflow-hidden" alt="Foto alwy" loading="lazy">
                     <h3 class="text-xl font-bold mb-1 text-brown-800">Alwy</h3>
                     <p class="text-brown-600 font-medium mb-4">IoT Enthusiast</p>
