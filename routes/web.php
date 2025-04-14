@@ -15,6 +15,8 @@ use App\Http\Controllers\Frontend\Dashboard\RecommendationController;
 use App\Http\Controllers\Frontend\Dashboard\SymptomController;
 use App\Http\Controllers\Frontend\HomeController;
 use Illuminate\Support\Facades\Route;
+use Spatie\Sitemap\Sitemap;
+use Spatie\Sitemap\Tags\Url;
 
 /*
  * ---------------------------------------------------------------------------------------
@@ -53,6 +55,15 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'index')->name('home');
     Route::post('/send-message', 'submitMessage')->name('home.send-message');
     Route::post('subscribe', 'subscribeEmail')->name('home.subscribe');
+});
+
+// Sitemap Generation
+Route::get('/generate-sitemap', function () {
+    Sitemap::create()
+        ->add(Url::create('/'))
+        ->writeToFile(public_path('sitemap.xml'));
+
+    return 'Sitemap generated!';
 });
 
 Route::prefix('patient')->name('patient.')->group(function () {
